@@ -1,14 +1,14 @@
 //your code here
 const drag = document.querySelectorAll(".image")
 
-for(let i = 0; i<drag.length; i++){
- drag[i].addEventListener("dragstart",()=>{
-		let image_link = drag[i]
+for(let index = 0; index<drag.length; index++){
+ drag[index].addEventListener("dragstart",()=>{
+		let image_link = drag[index]
 	})
- drag[i].addEventListener("dragover",(e)=>{
+ drag[index].addEventListener("dragover",(e)=>{
 		e.preventDefault()
 	})
- drag[i].addEventListener("drop",(e)=>{
+ drag[index].addEventListener("drop",(e)=>{
 		let dropOnImage = e.target.style.backgroundImage
 		let dragedImage = image_link.style.backgroundImage
 		e.target.style.backgroundImage =  dragedImage
